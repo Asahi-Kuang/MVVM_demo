@@ -36,6 +36,24 @@
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     id item = [self objectAtIndexPath:indexPath];
     _cellBlock(cell, item);
+    
+    [self fullSeparoterLineForTableView:tableView cell:cell];
+}
+
+- (void)fullSeparoterLineForTableView:(UITableView *)tableView cell:(UITableViewCell *)cell {
+    if ([tableView respondsToSelector:@selector(setSeparatorInset:)]) {
+        [tableView setSeparatorInset:UIEdgeInsetsZero];
+    }
+    if ([tableView respondsToSelector:@selector(setLayoutMargins:)]) {
+        [tableView setLayoutMargins:UIEdgeInsetsZero];
+    }
+    
+    if ([cell respondsToSelector:@selector(setSeparatorEffect:)]) {
+        [cell setSeparatorInset:UIEdgeInsetsZero];
+    }
+    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
+        [cell setLayoutMargins:UIEdgeInsetsZero];
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

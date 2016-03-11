@@ -29,6 +29,10 @@ static NSString *const identifier = @"cellIdentifier";
     [self configureTableView];
 }
 
+- (void)viewDidLayoutSubviews {
+    
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
