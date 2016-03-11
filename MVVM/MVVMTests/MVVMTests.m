@@ -29,13 +29,6 @@
 - (void)testExample {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
-    NSDictionary *dict1 = @{@"iconData":UIImagePNGRepresentation([UIImage imageNamed:@"face2"]), @"nameString":@"Asahi Kuang", @"genderString":@"Male", @"stuIdString":@"19910923"};
-    Model *model = [Model modelWithDictionary:dict1];
-    ViewModel *vm = [[ViewModel alloc] initWithModel:model];
-    XCTAssert([vm.name isEqualToString:dict1[@"nameString"]]);
-    XCTAssert([vm.gender isEqualToString:dict1[@"genderString"]]);
-    XCTAssert([vm.idString isEqualToString:dict1[@"stuIdString"]]);
-    XCTAssert([vm.data isKindOfClass:[NSData class]]);
 }
 
 - (void)testPerformanceExample {
