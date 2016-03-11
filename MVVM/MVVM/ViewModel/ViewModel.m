@@ -17,9 +17,9 @@
             return nil;
         }
         _data     = _model.iconData;
-        _name     = _model.nameString;
-        _gender   = _model.genderString;
-        _idString = _model.stuIdString;
+        _name     = [NSString stringWithFormat:@"姓名: %@", _model.nameString];
+        _gender   = [NSString stringWithFormat:@"性别: %@", _model.genderString];
+        _idString = [NSString stringWithFormat:@"学号: %@", _model.stuIdString];
     }
     return self;
 }
