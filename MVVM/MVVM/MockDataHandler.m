@@ -28,7 +28,7 @@
     NSDictionary *dict3 = @{@"iconData":UIImagePNGRepresentation([UIImage imageNamed:@"face4"]), @"nameString":@"Kuang Xiao qiu", @"genderString":@"Female", @"stuIdString":@"20200923"};
     NSDictionary *dict4 = @{@"iconData":UIImagePNGRepresentation([UIImage imageNamed:@"face5"]), @"nameString":@"Allies", @"genderString":@"Female", @"stuIdString":@"19940518"};
     NSDictionary *dict5 = @{@"iconData":UIImagePNGRepresentation([UIImage imageNamed:@"face3"]), @"nameString":@"Jacky", @"genderString":@"Male", @"stuIdString":@"19970419"};
-    NSArray *mockDatas = @[dict1, dict2, dict3, dict4, dict5];
+    NSArray *mockDatas = @[dict1, dict2, dict3, dict4, dict5, dict4, dict3, dict2, dict1, dict1, dict2, dict3, dict4, dict5, dict4, dict3, dict2, dict1];
     
     for (int i = 0; i < [mockDatas count]; i ++) {
         Model *model = [Model modelWithDictionary:mockDatas[i]];
